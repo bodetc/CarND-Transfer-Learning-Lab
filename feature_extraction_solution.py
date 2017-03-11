@@ -25,9 +25,9 @@ def load_bottleneck_data(training_file, validation_file):
     print("Training file", training_file)
     print("Validation file", validation_file)
 
-    with open(training_file, 'rb') as f:
+    with open('./bottlenecks/'+training_file, 'rb') as f:
         train_data = pickle.load(f)
-    with open(validation_file, 'rb') as f:
+    with open('./bottlenecks/'+validation_file, 'rb') as f:
         validation_data = pickle.load(f)
 
     X_train = train_data['features']
